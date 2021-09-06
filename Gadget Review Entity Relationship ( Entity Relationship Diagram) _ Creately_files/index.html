@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)https://app.creately.com/player/standard/src/index.html?playerId=wt0afhyugt -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Boson</title><!--<base href="/player/standard/src/">--><base href="."><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/x-icon" href="https://app.creately.com/player/standard/src/favicon.ico"><link rel="stylsheet" href="https://app.creately.com/player/standard/src/loading.css" ;=""><style>body {
+          padding: 0;
+          margin: 0;
+      }
+
+      .bsn-spinner {
+          position: absolute;
+          width: 70px;
+          height: 70px;
+      }
+
+      .bsn-spinner:before {
+          display: block;
+          width: 60px;
+          height: 60px;
+          border-top: 5px solid #e4e4e4;
+          border-right: 5px solid transparent;
+          border-bottom: 5px solid transparent;
+          border-left: 5px solid transparent;
+          border-radius: 50%;
+          -webkit-animation: spin 1s infinite linear;
+          animation: spin 1s infinite linear;
+          content: '';
+      }
+
+      .bsn-icon-bulb, .bsn-spinner {
+          position: absolute;
+          transform: translate(-50%, -50%);
+          left: 50%;
+          top: 50%;
+      }</style><link href="./styles.b302c0f90aeecf9a85c5.bundle.css" rel="stylesheet"><style>.std-app-canvas[_ngcontent-c0]{cursor:move}</style><style>@-webkit-keyframes spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@keyframes spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}.fx-bg-transition[_ngcontent-c1]{transition:background-color .1s ease,background .1s ease}.tb-btn-container[_ngcontent-c1]   .fx-button[_ngcontent-c1]{position:relative;color:#696969}.tb-btn-container[_ngcontent-c1]   .fx-button.fx-icon[_ngcontent-c1]:hover{background-color:hsla(0,0%,100%,.5)}.tb-btn-container[_ngcontent-c1]   .fx-button.fx-icon[_ngcontent-c1]:active{background-color:hsla(0,0%,100%,.8)}*[_ngcontent-c1]{margin:0;padding:0;border:0}h2[_ngcontent-c1]{font-size:18px}h2[_ngcontent-c1], h3[_ngcontent-c1]{font-weight:400}h3[_ngcontent-c1]{font-size:16px}.fx-center-all[_ngcontent-c1]{display:-webkit-box;display:-ms-flexbox;display:flex;-moz-justify-content:center;-ms-justify-content:center;-webkit-box-pack:center;justify-content:center;-ms-flex-pack:center;-moz-align-items:center;-ms-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.fx-center-horizontal-without-flex[_ngcontent-c1]{top:0;left:0;right:0;margin:0 auto;position:absolute}.fx-center-vertical[_ngcontent-c1]{display:-webkit-box;display:-ms-flexbox;display:flex;-moz-flex-direction:row;-ms-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row;-moz-align-items:center;-ms-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.fx-center-without-flex[_ngcontent-c1]{-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);left:50%;top:50%;position:absolute}.fx-left[_ngcontent-c1]{float:left;text-align:left}.fx-right[_ngcontent-c1]{float:right;text-align:right}.fx-center[_ngcontent-c1]{margin:0 auto;text-align:center}.fx-hidden[_ngcontent-c1]{display:none}.fx-invisible[_ngcontent-c1]{visibility:hidden}.fx-round[_ngcontent-c1], .std-sh-panel-container[_ngcontent-c1]   .fx-button[_ngcontent-c1]{border-radius:100%}.fx-floating[_ngcontent-c1]{position:absolute;z-index:1}.fx-padding[_ngcontent-c1]{padding:10px}.fx-margin[_ngcontent-c1]{margin:10px}.fx-margin-top-5[_ngcontent-c1]{margin-top:5px}.fx-margin-top-10[_ngcontent-c1]{margin-top:10px}.fx-padding-top-5[_ngcontent-c1]{padding-top:5px}.fx-margin-bottom-5[_ngcontent-c1]{margin-bottom:5px}.fx-margin-bottom-10[_ngcontent-c1]{margin-bottom:10px}.fx-margin-bottom-20[_ngcontent-c1]{margin-bottom:20px}.fx-padding-bottom-5[_ngcontent-c1]{padding-bottom:5px}.fx-padding-bottom-10[_ngcontent-c1]{padding-bottom:10px}.fx-no-padding[_ngcontent-c1]{padding:0}.fx-no-margin[_ngcontent-c1]{margin:0}.fx-no-float[_ngcontent-c1]{float:none}.fx-ellipsis[_ngcontent-c1]{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.fx-cover[_ngcontent-c1], .fx-span-both[_ngcontent-c1]{height:100%;width:100%}.fx-span-width[_ngcontent-c1]{width:100%}.fx-span-height[_ngcontent-c1]{height:100%}.fx-cover[_ngcontent-c1]{position:absolute;overflow:hidden}.fx-fix-top[_ngcontent-c1]{top:0}.fx-fix-bottom[_ngcontent-c1]{bottom:0}.fx-fix-right[_ngcontent-c1]{right:0}.fx-fix-left[_ngcontent-c1]{left:0}.fx-fix-top-left[_ngcontent-c1]{top:0;left:0}.fx-fix-top-right[_ngcontent-c1]{top:0;right:0}.fx-overflow-hidden[_ngcontent-c1]{overflow:hidden}button.extra-light-grey[_ngcontent-c1], div.extra-light-grey[_ngcontent-c1]{background-color:#f2f2f2}a.extra-light-grey[_ngcontent-c1], h1.extra-light-grey[_ngcontent-c1], h2.extra-light-grey[_ngcontent-c1], h3.extra-light-grey[_ngcontent-c1], i.extra-light-grey[_ngcontent-c1], label.extra-light-grey[_ngcontent-c1], p.extra-light-grey[_ngcontent-c1], span.extra-light-grey[_ngcontent-c1]{color:#f2f2f2}button.light-grey[_ngcontent-c1], div.light-grey[_ngcontent-c1]{background-color:#e4e4e4}a.light-grey[_ngcontent-c1], h1.light-grey[_ngcontent-c1], h2.light-grey[_ngcontent-c1], h3.light-grey[_ngcontent-c1], i.light-grey[_ngcontent-c1], label.light-grey[_ngcontent-c1], p.light-grey[_ngcontent-c1], span.light-grey[_ngcontent-c1]{color:#e4e4e4}button.medium-grey[_ngcontent-c1], div.medium-grey[_ngcontent-c1]{background-color:#d8d8d8}a.medium-grey[_ngcontent-c1], h1.medium-grey[_ngcontent-c1], h2.medium-grey[_ngcontent-c1], h3.medium-grey[_ngcontent-c1], i.medium-grey[_ngcontent-c1], label.medium-grey[_ngcontent-c1], p.medium-grey[_ngcontent-c1], span.medium-grey[_ngcontent-c1]{color:#d8d8d8}button.grey[_ngcontent-c1], div.grey[_ngcontent-c1]{background-color:#a09f9f}a.grey[_ngcontent-c1], h1.grey[_ngcontent-c1], h2.grey[_ngcontent-c1], h3.grey[_ngcontent-c1], i.grey[_ngcontent-c1], label.grey[_ngcontent-c1], p.grey[_ngcontent-c1], span.grey[_ngcontent-c1]{color:#a09f9f}button.dark-grey[_ngcontent-c1], div.dark-grey[_ngcontent-c1]{background-color:#696969}a.dark-grey[_ngcontent-c1], h1.dark-grey[_ngcontent-c1], h2.dark-grey[_ngcontent-c1], h3.dark-grey[_ngcontent-c1], i.dark-grey[_ngcontent-c1], label.dark-grey[_ngcontent-c1], p.dark-grey[_ngcontent-c1], span.dark-grey[_ngcontent-c1]{color:#696969}button.crimson[_ngcontent-c1], div.crimson[_ngcontent-c1]{background-color:#f05758}a.crimson[_ngcontent-c1], h1.crimson[_ngcontent-c1], h2.crimson[_ngcontent-c1], h3.crimson[_ngcontent-c1], i.crimson[_ngcontent-c1], label.crimson[_ngcontent-c1], p.crimson[_ngcontent-c1], span.crimson[_ngcontent-c1]{color:#f05758}button.black[_ngcontent-c1], div.black[_ngcontent-c1]{background-color:#141414}a.black[_ngcontent-c1], h1.black[_ngcontent-c1], h2.black[_ngcontent-c1], h3.black[_ngcontent-c1], i.black[_ngcontent-c1], label.black[_ngcontent-c1], p.black[_ngcontent-c1], span.black[_ngcontent-c1]{color:#141414}button.yellow[_ngcontent-c1], div.yellow[_ngcontent-c1]{background-color:#faa72d}a.yellow[_ngcontent-c1], h1.yellow[_ngcontent-c1], h2.yellow[_ngcontent-c1], h3.yellow[_ngcontent-c1], i.yellow[_ngcontent-c1], label.yellow[_ngcontent-c1], p.yellow[_ngcontent-c1], span.yellow[_ngcontent-c1]{color:#faa72d}button.light-yellow[_ngcontent-c1], div.light-yellow[_ngcontent-c1]{background-color:#fdc977}a.light-yellow[_ngcontent-c1], h1.light-yellow[_ngcontent-c1], h2.light-yellow[_ngcontent-c1], h3.light-yellow[_ngcontent-c1], i.light-yellow[_ngcontent-c1], label.light-yellow[_ngcontent-c1], p.light-yellow[_ngcontent-c1], span.light-yellow[_ngcontent-c1]{color:#fdc977}button.blue[_ngcontent-c1], div.blue[_ngcontent-c1]{background-color:#1a7bb9}a.blue[_ngcontent-c1], h1.blue[_ngcontent-c1], h2.blue[_ngcontent-c1], h3.blue[_ngcontent-c1], i.blue[_ngcontent-c1], label.blue[_ngcontent-c1], p.blue[_ngcontent-c1], span.blue[_ngcontent-c1]{color:#1a7bb9}button.green[_ngcontent-c1], div.green[_ngcontent-c1]{background-color:#6da067}a.green[_ngcontent-c1], h1.green[_ngcontent-c1], h2.green[_ngcontent-c1], h3.green[_ngcontent-c1], i.green[_ngcontent-c1], label.green[_ngcontent-c1], p.green[_ngcontent-c1], span.green[_ngcontent-c1]{color:#6da067}button.white[_ngcontent-c1], div.white[_ngcontent-c1]{background-color:#fff}a.white[_ngcontent-c1], h1.white[_ngcontent-c1], h2.white[_ngcontent-c1], h3.white[_ngcontent-c1], i.white[_ngcontent-c1], label.white[_ngcontent-c1], p.white[_ngcontent-c1], span.white[_ngcontent-c1]{color:#fff}button.facebook[_ngcontent-c1], div.facebook[_ngcontent-c1]{background-color:#324b7f}a.facebook[_ngcontent-c1], h1.facebook[_ngcontent-c1], h2.facebook[_ngcontent-c1], h3.facebook[_ngcontent-c1], i.facebook[_ngcontent-c1], label.facebook[_ngcontent-c1], p.facebook[_ngcontent-c1], span.facebook[_ngcontent-c1]{color:#324b7f}button.twitter[_ngcontent-c1], div.twitter[_ngcontent-c1]{background-color:#339dc3}a.twitter[_ngcontent-c1], h1.twitter[_ngcontent-c1], h2.twitter[_ngcontent-c1], h3.twitter[_ngcontent-c1], i.twitter[_ngcontent-c1], label.twitter[_ngcontent-c1], p.twitter[_ngcontent-c1], span.twitter[_ngcontent-c1]{color:#339dc3}button.google[_ngcontent-c1], div.google[_ngcontent-c1]{background-color:#dc4535}a.google[_ngcontent-c1], h1.google[_ngcontent-c1], h2.google[_ngcontent-c1], h3.google[_ngcontent-c1], i.google[_ngcontent-c1], label.google[_ngcontent-c1], p.google[_ngcontent-c1], span.google[_ngcontent-c1]{color:#dc4535}button.linkedin[_ngcontent-c1], div.linkedin[_ngcontent-c1]{background-color:#025a84}a.linkedin[_ngcontent-c1], h1.linkedin[_ngcontent-c1], h2.linkedin[_ngcontent-c1], h3.linkedin[_ngcontent-c1], i.linkedin[_ngcontent-c1], label.linkedin[_ngcontent-c1], p.linkedin[_ngcontent-c1], span.linkedin[_ngcontent-c1]{color:#025a84}.std-sh-panel-container[_ngcontent-c1]   .fx-button[_ngcontent-c1]   i[_ngcontent-c1]{font-size:22px;color:#fff}.std-sh-panel-container[_ngcontent-c1]   label[_ngcontent-c1]{display:none}.std-sh-panel-container[_ngcontent-c1]   .ss-button-container[_ngcontent-c1]{display:inline-block;margin-left:20px}.std-sh-panel-container[_ngcontent-c1]   .ss-button-container[_ngcontent-c1]:first-child{margin-left:0}.tb-container[_ngcontent-c1]{width:100%;height:40px;line-height:40px;display:-webkit-box;display:-ms-flexbox;display:flex;background-color:#e4e4e4;transition:opacity .1s ease,-webkit-transform .1s ease;transition:transform .1s ease,opacity .1s ease;transition:transform .1s ease,opacity .1s ease,-webkit-transform .1s ease;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0);opacity:.5;z-index:4;transition-delay:.2s}.tb-container[_ngcontent-c1]   .tb-sliding-panel[_ngcontent-c1] > *[_ngcontent-c1]{transition:opacity .3s ease}.tb-container[_ngcontent-c1]   .tb-sliding-panel[_ngcontent-c1]:hover   .tb-sliding-panel-children[_ngcontent-c1]{opacity:.5}.tb-container[_ngcontent-c1]   .tb-sliding-panel[_ngcontent-c1]:hover   .tb-sliding-panel-children[_ngcontent-c1]:hover{opacity:1}.tb-container[_ngcontent-c1]   .tb-sliding-panel-children[_ngcontent-c1] > *[_ngcontent-c1]{transition:opacity .3s ease}.tb-container[_ngcontent-c1]   .tb-sliding-panel[_ngcontent-c1]:hover   .tb-sliding-panel-children[_ngcontent-c1] > *[_ngcontent-c1]{opacity:.5}.tb-container[_ngcontent-c1]   .tb-sliding-panel[_ngcontent-c1]:hover   .tb-sliding-panel-children[_ngcontent-c1] > [_ngcontent-c1]:hover{opacity:1}.tb-container[_ngcontent-c1]   .thumbnail-carousel-content[_ngcontent-c1] > *[_ngcontent-c1]{transition:opacity .3s ease}.tb-container[_ngcontent-c1]   .thumbnail-carousel-content[_ngcontent-c1]:hover   .tci-link-item[_ngcontent-c1]{opacity:.5}.tb-container[_ngcontent-c1]   .thumbnail-carousel-content[_ngcontent-c1]:hover   .tci-link-item[_ngcontent-c1]:hover{opacity:1}.tb-container[_ngcontent-c1]   .tci-link-item[_ngcontent-c1] > *[_ngcontent-c1]{transition:opacity .3s ease}.tb-container[_ngcontent-c1]   .thumbnail-carousel-content[_ngcontent-c1]:hover   .tci-link-item[_ngcontent-c1] > *[_ngcontent-c1]{opacity:.5}.tb-container[_ngcontent-c1]   .thumbnail-carousel-content[_ngcontent-c1]:hover   .tci-link-item[_ngcontent-c1] > [_ngcontent-c1]:hover{opacity:1}.tb-container[_ngcontent-c1]:hover{opacity:1;transition-delay:0s}.tb-button[_ngcontent-c1]{padding-left:5px;padding-right:5px}.tb-button[_ngcontent-c1]   i[_ngcontent-c1]{font-size:1.6rem}.tb-btn-container.center[_ngcontent-c1]{-moz-flex-grow:1;-ms-flex-grow:1;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.std-app-container[_ngcontent-c1]:hover   .tb-container[_ngcontent-c1]{-webkit-transform:translateZ(0);transform:translateZ(0)}.std-tb-btn-count[_ngcontent-c1]{font-size:12px;color:#696969;position:relative;top:2px;left:-2px}</style><style>@-webkit-keyframes spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@keyframes spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}.fx-bg-transition[_ngcontent-c2]{transition:background-color .1s ease,background .1s ease}.tb-btn-container[_ngcontent-c2]   .fx-button[_ngcontent-c2]{position:relative;color:#696969}.tb-btn-container[_ngcontent-c2]   .fx-button.fx-icon[_ngcontent-c2]:hover{background-color:hsla(0,0%,100%,.5)}.tb-btn-container[_ngcontent-c2]   .fx-button.fx-icon[_ngcontent-c2]:active{background-color:hsla(0,0%,100%,.8)}*[_ngcontent-c2]{margin:0;padding:0;border:0}h2[_ngcontent-c2]{font-size:18px}h2[_ngcontent-c2], h3[_ngcontent-c2]{font-weight:400}h3[_ngcontent-c2]{font-size:16px}.fx-center-all[_ngcontent-c2]{display:-webkit-box;display:-ms-flexbox;display:flex;-moz-justify-content:center;-ms-justify-content:center;-webkit-box-pack:center;justify-content:center;-ms-flex-pack:center;-moz-align-items:center;-ms-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.fx-center-horizontal-without-flex[_ngcontent-c2]{top:0;left:0;right:0;margin:0 auto;position:absolute}.fx-center-vertical[_ngcontent-c2]{display:-webkit-box;display:-ms-flexbox;display:flex;-moz-flex-direction:row;-ms-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row;-moz-align-items:center;-ms-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.fx-center-without-flex[_ngcontent-c2]{-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);left:50%;top:50%;position:absolute}.fx-left[_ngcontent-c2]{float:left;text-align:left}.fx-right[_ngcontent-c2]{float:right;text-align:right}.fx-center[_ngcontent-c2]{margin:0 auto;text-align:center}.fx-hidden[_ngcontent-c2]{display:none}.fx-invisible[_ngcontent-c2]{visibility:hidden}.fx-round[_ngcontent-c2], .std-sh-panel-container[_ngcontent-c2]   .fx-button[_ngcontent-c2]{border-radius:100%}.fx-floating[_ngcontent-c2]{position:absolute;z-index:1}.fx-padding[_ngcontent-c2]{padding:10px}.fx-margin[_ngcontent-c2]{margin:10px}.fx-margin-top-5[_ngcontent-c2]{margin-top:5px}.fx-margin-top-10[_ngcontent-c2]{margin-top:10px}.fx-padding-top-5[_ngcontent-c2]{padding-top:5px}.fx-margin-bottom-5[_ngcontent-c2]{margin-bottom:5px}.fx-margin-bottom-10[_ngcontent-c2]{margin-bottom:10px}.fx-margin-bottom-20[_ngcontent-c2]{margin-bottom:20px}.fx-padding-bottom-5[_ngcontent-c2]{padding-bottom:5px}.fx-padding-bottom-10[_ngcontent-c2]{padding-bottom:10px}.fx-no-padding[_ngcontent-c2]{padding:0}.fx-no-margin[_ngcontent-c2]{margin:0}.fx-no-float[_ngcontent-c2]{float:none}.fx-ellipsis[_ngcontent-c2]{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.fx-cover[_ngcontent-c2], .fx-span-both[_ngcontent-c2]{height:100%;width:100%}.fx-span-width[_ngcontent-c2]{width:100%}.fx-span-height[_ngcontent-c2]{height:100%}.fx-cover[_ngcontent-c2]{position:absolute;overflow:hidden}.fx-fix-top[_ngcontent-c2]{top:0}.fx-fix-bottom[_ngcontent-c2]{bottom:0}.fx-fix-right[_ngcontent-c2]{right:0}.fx-fix-left[_ngcontent-c2]{left:0}.fx-fix-top-left[_ngcontent-c2]{top:0;left:0}.fx-fix-top-right[_ngcontent-c2]{top:0;right:0}.fx-overflow-hidden[_ngcontent-c2]{overflow:hidden}button.extra-light-grey[_ngcontent-c2], div.extra-light-grey[_ngcontent-c2]{background-color:#f2f2f2}a.extra-light-grey[_ngcontent-c2], h1.extra-light-grey[_ngcontent-c2], h2.extra-light-grey[_ngcontent-c2], h3.extra-light-grey[_ngcontent-c2], i.extra-light-grey[_ngcontent-c2], label.extra-light-grey[_ngcontent-c2], p.extra-light-grey[_ngcontent-c2], span.extra-light-grey[_ngcontent-c2]{color:#f2f2f2}button.light-grey[_ngcontent-c2], div.light-grey[_ngcontent-c2]{background-color:#e4e4e4}a.light-grey[_ngcontent-c2], h1.light-grey[_ngcontent-c2], h2.light-grey[_ngcontent-c2], h3.light-grey[_ngcontent-c2], i.light-grey[_ngcontent-c2], label.light-grey[_ngcontent-c2], p.light-grey[_ngcontent-c2], span.light-grey[_ngcontent-c2]{color:#e4e4e4}button.medium-grey[_ngcontent-c2], div.medium-grey[_ngcontent-c2]{background-color:#d8d8d8}a.medium-grey[_ngcontent-c2], h1.medium-grey[_ngcontent-c2], h2.medium-grey[_ngcontent-c2], h3.medium-grey[_ngcontent-c2], i.medium-grey[_ngcontent-c2], label.medium-grey[_ngcontent-c2], p.medium-grey[_ngcontent-c2], span.medium-grey[_ngcontent-c2]{color:#d8d8d8}button.grey[_ngcontent-c2], div.grey[_ngcontent-c2]{background-color:#a09f9f}a.grey[_ngcontent-c2], h1.grey[_ngcontent-c2], h2.grey[_ngcontent-c2], h3.grey[_ngcontent-c2], i.grey[_ngcontent-c2], label.grey[_ngcontent-c2], p.grey[_ngcontent-c2], span.grey[_ngcontent-c2]{color:#a09f9f}button.dark-grey[_ngcontent-c2], div.dark-grey[_ngcontent-c2]{background-color:#696969}a.dark-grey[_ngcontent-c2], h1.dark-grey[_ngcontent-c2], h2.dark-grey[_ngcontent-c2], h3.dark-grey[_ngcontent-c2], i.dark-grey[_ngcontent-c2], label.dark-grey[_ngcontent-c2], p.dark-grey[_ngcontent-c2], span.dark-grey[_ngcontent-c2]{color:#696969}button.crimson[_ngcontent-c2], div.crimson[_ngcontent-c2]{background-color:#f05758}a.crimson[_ngcontent-c2], h1.crimson[_ngcontent-c2], h2.crimson[_ngcontent-c2], h3.crimson[_ngcontent-c2], i.crimson[_ngcontent-c2], label.crimson[_ngcontent-c2], p.crimson[_ngcontent-c2], span.crimson[_ngcontent-c2]{color:#f05758}button.black[_ngcontent-c2], div.black[_ngcontent-c2]{background-color:#141414}a.black[_ngcontent-c2], h1.black[_ngcontent-c2], h2.black[_ngcontent-c2], h3.black[_ngcontent-c2], i.black[_ngcontent-c2], label.black[_ngcontent-c2], p.black[_ngcontent-c2], span.black[_ngcontent-c2]{color:#141414}button.yellow[_ngcontent-c2], div.yellow[_ngcontent-c2]{background-color:#faa72d}a.yellow[_ngcontent-c2], h1.yellow[_ngcontent-c2], h2.yellow[_ngcontent-c2], h3.yellow[_ngcontent-c2], i.yellow[_ngcontent-c2], label.yellow[_ngcontent-c2], p.yellow[_ngcontent-c2], span.yellow[_ngcontent-c2]{color:#faa72d}button.light-yellow[_ngcontent-c2], div.light-yellow[_ngcontent-c2]{background-color:#fdc977}a.light-yellow[_ngcontent-c2], h1.light-yellow[_ngcontent-c2], h2.light-yellow[_ngcontent-c2], h3.light-yellow[_ngcontent-c2], i.light-yellow[_ngcontent-c2], label.light-yellow[_ngcontent-c2], p.light-yellow[_ngcontent-c2], span.light-yellow[_ngcontent-c2]{color:#fdc977}button.blue[_ngcontent-c2], div.blue[_ngcontent-c2]{background-color:#1a7bb9}a.blue[_ngcontent-c2], h1.blue[_ngcontent-c2], h2.blue[_ngcontent-c2], h3.blue[_ngcontent-c2], i.blue[_ngcontent-c2], label.blue[_ngcontent-c2], p.blue[_ngcontent-c2], span.blue[_ngcontent-c2]{color:#1a7bb9}button.green[_ngcontent-c2], div.green[_ngcontent-c2]{background-color:#6da067}a.green[_ngcontent-c2], h1.green[_ngcontent-c2], h2.green[_ngcontent-c2], h3.green[_ngcontent-c2], i.green[_ngcontent-c2], label.green[_ngcontent-c2], p.green[_ngcontent-c2], span.green[_ngcontent-c2]{color:#6da067}button.white[_ngcontent-c2], div.white[_ngcontent-c2]{background-color:#fff}a.white[_ngcontent-c2], h1.white[_ngcontent-c2], h2.white[_ngcontent-c2], h3.white[_ngcontent-c2], i.white[_ngcontent-c2], label.white[_ngcontent-c2], p.white[_ngcontent-c2], span.white[_ngcontent-c2]{color:#fff}button.facebook[_ngcontent-c2], div.facebook[_ngcontent-c2]{background-color:#324b7f}a.facebook[_ngcontent-c2], h1.facebook[_ngcontent-c2], h2.facebook[_ngcontent-c2], h3.facebook[_ngcontent-c2], i.facebook[_ngcontent-c2], label.facebook[_ngcontent-c2], p.facebook[_ngcontent-c2], span.facebook[_ngcontent-c2]{color:#324b7f}button.twitter[_ngcontent-c2], div.twitter[_ngcontent-c2]{background-color:#339dc3}a.twitter[_ngcontent-c2], h1.twitter[_ngcontent-c2], h2.twitter[_ngcontent-c2], h3.twitter[_ngcontent-c2], i.twitter[_ngcontent-c2], label.twitter[_ngcontent-c2], p.twitter[_ngcontent-c2], span.twitter[_ngcontent-c2]{color:#339dc3}button.google[_ngcontent-c2], div.google[_ngcontent-c2]{background-color:#dc4535}a.google[_ngcontent-c2], h1.google[_ngcontent-c2], h2.google[_ngcontent-c2], h3.google[_ngcontent-c2], i.google[_ngcontent-c2], label.google[_ngcontent-c2], p.google[_ngcontent-c2], span.google[_ngcontent-c2]{color:#dc4535}button.linkedin[_ngcontent-c2], div.linkedin[_ngcontent-c2]{background-color:#025a84}a.linkedin[_ngcontent-c2], h1.linkedin[_ngcontent-c2], h2.linkedin[_ngcontent-c2], h3.linkedin[_ngcontent-c2], i.linkedin[_ngcontent-c2], label.linkedin[_ngcontent-c2], p.linkedin[_ngcontent-c2], span.linkedin[_ngcontent-c2]{color:#025a84}.std-sh-panel-container[_ngcontent-c2]   .fx-button[_ngcontent-c2]   i[_ngcontent-c2]{font-size:22px;color:#fff}.std-sh-panel-container[_ngcontent-c2]   label[_ngcontent-c2]{display:none}.std-sh-panel-container[_ngcontent-c2]   .ss-button-container[_ngcontent-c2]{display:inline-block;margin-left:20px}.std-sh-panel-container[_ngcontent-c2]   .ss-button-container[_ngcontent-c2]:first-child{margin-left:0}.tb-container[_ngcontent-c2]{width:100%;height:40px;line-height:40px;display:-webkit-box;display:-ms-flexbox;display:flex;background-color:#e4e4e4;transition:opacity .1s ease,-webkit-transform .1s ease;transition:transform .1s ease,opacity .1s ease;transition:transform .1s ease,opacity .1s ease,-webkit-transform .1s ease;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0);opacity:.5;z-index:4;transition-delay:.2s}.tb-container[_ngcontent-c2]   .tb-sliding-panel[_ngcontent-c2] > *[_ngcontent-c2]{transition:opacity .3s ease}.tb-container[_ngcontent-c2]   .tb-sliding-panel[_ngcontent-c2]:hover   .tb-sliding-panel-children[_ngcontent-c2]{opacity:.5}.tb-container[_ngcontent-c2]   .tb-sliding-panel[_ngcontent-c2]:hover   .tb-sliding-panel-children[_ngcontent-c2]:hover{opacity:1}.tb-container[_ngcontent-c2]   .tb-sliding-panel-children[_ngcontent-c2] > *[_ngcontent-c2]{transition:opacity .3s ease}.tb-container[_ngcontent-c2]   .tb-sliding-panel[_ngcontent-c2]:hover   .tb-sliding-panel-children[_ngcontent-c2] > *[_ngcontent-c2]{opacity:.5}.tb-container[_ngcontent-c2]   .tb-sliding-panel[_ngcontent-c2]:hover   .tb-sliding-panel-children[_ngcontent-c2] > [_ngcontent-c2]:hover{opacity:1}.tb-container[_ngcontent-c2]   .thumbnail-carousel-content[_ngcontent-c2] > *[_ngcontent-c2]{transition:opacity .3s ease}.tb-container[_ngcontent-c2]   .thumbnail-carousel-content[_ngcontent-c2]:hover   .tci-link-item[_ngcontent-c2]{opacity:.5}.tb-container[_ngcontent-c2]   .thumbnail-carousel-content[_ngcontent-c2]:hover   .tci-link-item[_ngcontent-c2]:hover{opacity:1}.tb-container[_ngcontent-c2]   .tci-link-item[_ngcontent-c2] > *[_ngcontent-c2]{transition:opacity .3s ease}.tb-container[_ngcontent-c2]   .thumbnail-carousel-content[_ngcontent-c2]:hover   .tci-link-item[_ngcontent-c2] > *[_ngcontent-c2]{opacity:.5}.tb-container[_ngcontent-c2]   .thumbnail-carousel-content[_ngcontent-c2]:hover   .tci-link-item[_ngcontent-c2] > [_ngcontent-c2]:hover{opacity:1}.tb-container[_ngcontent-c2]:hover{opacity:1;transition-delay:0s}.tb-button[_ngcontent-c2]{padding-left:5px;padding-right:5px}.tb-button[_ngcontent-c2]   i[_ngcontent-c2]{font-size:1.6rem}.tb-btn-container.center[_ngcontent-c2]{-moz-flex-grow:1;-ms-flex-grow:1;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.std-app-container[_ngcontent-c2]:hover   .tb-container[_ngcontent-c2]{-webkit-transform:translateZ(0);transform:translateZ(0)}.std-tb-btn-count[_ngcontent-c2]{font-size:12px;color:#696969;position:relative;top:2px;left:-2px}</style><style>*[_ngcontent-c3]{margin:0;padding:0;border:0}h2[_ngcontent-c3]{font-size:18px}h2[_ngcontent-c3], h3[_ngcontent-c3]{font-weight:400}h3[_ngcontent-c3]{font-size:16px}.fx-center-all[_ngcontent-c3]{display:-webkit-box;display:-ms-flexbox;display:flex;-moz-justify-content:center;-ms-justify-content:center;-webkit-box-pack:center;justify-content:center;-ms-flex-pack:center;-moz-align-items:center;-ms-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.fx-center-horizontal-without-flex[_ngcontent-c3]{top:0;left:0;right:0;margin:0 auto;position:absolute}.fx-center-vertical[_ngcontent-c3]{display:-webkit-box;display:-ms-flexbox;display:flex;-moz-flex-direction:row;-ms-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row;-moz-align-items:center;-ms-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.fx-center-without-flex[_ngcontent-c3]{-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);left:50%;top:50%;position:absolute}.fx-left[_ngcontent-c3]{float:left;text-align:left}.fx-right[_ngcontent-c3]{float:right;text-align:right}.fx-center[_ngcontent-c3]{margin:0 auto;text-align:center}.fx-hidden[_ngcontent-c3]{display:none}.fx-invisible[_ngcontent-c3]{visibility:hidden}.fx-round[_ngcontent-c3], .std-sh-panel-container[_ngcontent-c3]   .fx-button[_ngcontent-c3]{border-radius:100%}.fx-floating[_ngcontent-c3]{position:absolute;z-index:1}.fx-padding[_ngcontent-c3]{padding:10px}.fx-margin[_ngcontent-c3]{margin:10px}.fx-margin-top-5[_ngcontent-c3]{margin-top:5px}.fx-margin-top-10[_ngcontent-c3]{margin-top:10px}.fx-padding-top-5[_ngcontent-c3]{padding-top:5px}.fx-margin-bottom-5[_ngcontent-c3]{margin-bottom:5px}.fx-margin-bottom-10[_ngcontent-c3]{margin-bottom:10px}.fx-margin-bottom-20[_ngcontent-c3]{margin-bottom:20px}.fx-padding-bottom-5[_ngcontent-c3]{padding-bottom:5px}.fx-padding-bottom-10[_ngcontent-c3]{padding-bottom:10px}.fx-no-padding[_ngcontent-c3]{padding:0}.fx-no-margin[_ngcontent-c3]{margin:0}.fx-no-float[_ngcontent-c3]{float:none}.fx-ellipsis[_ngcontent-c3]{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.fx-cover[_ngcontent-c3], .fx-span-both[_ngcontent-c3]{height:100%;width:100%}.fx-span-width[_ngcontent-c3]{width:100%}.fx-span-height[_ngcontent-c3]{height:100%}.fx-cover[_ngcontent-c3]{position:absolute;overflow:hidden}.fx-fix-top[_ngcontent-c3]{top:0}.fx-fix-bottom[_ngcontent-c3]{bottom:0}.fx-fix-right[_ngcontent-c3]{right:0}.fx-fix-left[_ngcontent-c3]{left:0}.fx-fix-top-left[_ngcontent-c3]{top:0;left:0}.fx-fix-top-right[_ngcontent-c3]{top:0;right:0}.fx-overflow-hidden[_ngcontent-c3]{overflow:hidden}button.extra-light-grey[_ngcontent-c3], div.extra-light-grey[_ngcontent-c3]{background-color:#f2f2f2}a.extra-light-grey[_ngcontent-c3], h1.extra-light-grey[_ngcontent-c3], h2.extra-light-grey[_ngcontent-c3], h3.extra-light-grey[_ngcontent-c3], i.extra-light-grey[_ngcontent-c3], label.extra-light-grey[_ngcontent-c3], p.extra-light-grey[_ngcontent-c3], span.extra-light-grey[_ngcontent-c3]{color:#f2f2f2}button.light-grey[_ngcontent-c3], div.light-grey[_ngcontent-c3]{background-color:#e4e4e4}a.light-grey[_ngcontent-c3], h1.light-grey[_ngcontent-c3], h2.light-grey[_ngcontent-c3], h3.light-grey[_ngcontent-c3], i.light-grey[_ngcontent-c3], label.light-grey[_ngcontent-c3], p.light-grey[_ngcontent-c3], span.light-grey[_ngcontent-c3]{color:#e4e4e4}button.medium-grey[_ngcontent-c3], div.medium-grey[_ngcontent-c3]{background-color:#d8d8d8}a.medium-grey[_ngcontent-c3], h1.medium-grey[_ngcontent-c3], h2.medium-grey[_ngcontent-c3], h3.medium-grey[_ngcontent-c3], i.medium-grey[_ngcontent-c3], label.medium-grey[_ngcontent-c3], p.medium-grey[_ngcontent-c3], span.medium-grey[_ngcontent-c3]{color:#d8d8d8}button.grey[_ngcontent-c3], div.grey[_ngcontent-c3]{background-color:#a09f9f}a.grey[_ngcontent-c3], h1.grey[_ngcontent-c3], h2.grey[_ngcontent-c3], h3.grey[_ngcontent-c3], i.grey[_ngcontent-c3], label.grey[_ngcontent-c3], p.grey[_ngcontent-c3], span.grey[_ngcontent-c3]{color:#a09f9f}button.dark-grey[_ngcontent-c3], div.dark-grey[_ngcontent-c3]{background-color:#696969}a.dark-grey[_ngcontent-c3], h1.dark-grey[_ngcontent-c3], h2.dark-grey[_ngcontent-c3], h3.dark-grey[_ngcontent-c3], i.dark-grey[_ngcontent-c3], label.dark-grey[_ngcontent-c3], p.dark-grey[_ngcontent-c3], span.dark-grey[_ngcontent-c3]{color:#696969}button.crimson[_ngcontent-c3], div.crimson[_ngcontent-c3]{background-color:#f05758}a.crimson[_ngcontent-c3], h1.crimson[_ngcontent-c3], h2.crimson[_ngcontent-c3], h3.crimson[_ngcontent-c3], i.crimson[_ngcontent-c3], label.crimson[_ngcontent-c3], p.crimson[_ngcontent-c3], span.crimson[_ngcontent-c3]{color:#f05758}button.black[_ngcontent-c3], div.black[_ngcontent-c3]{background-color:#141414}a.black[_ngcontent-c3], h1.black[_ngcontent-c3], h2.black[_ngcontent-c3], h3.black[_ngcontent-c3], i.black[_ngcontent-c3], label.black[_ngcontent-c3], p.black[_ngcontent-c3], span.black[_ngcontent-c3]{color:#141414}button.yellow[_ngcontent-c3], div.yellow[_ngcontent-c3]{background-color:#faa72d}a.yellow[_ngcontent-c3], h1.yellow[_ngcontent-c3], h2.yellow[_ngcontent-c3], h3.yellow[_ngcontent-c3], i.yellow[_ngcontent-c3], label.yellow[_ngcontent-c3], p.yellow[_ngcontent-c3], span.yellow[_ngcontent-c3]{color:#faa72d}button.light-yellow[_ngcontent-c3], div.light-yellow[_ngcontent-c3]{background-color:#fdc977}a.light-yellow[_ngcontent-c3], h1.light-yellow[_ngcontent-c3], h2.light-yellow[_ngcontent-c3], h3.light-yellow[_ngcontent-c3], i.light-yellow[_ngcontent-c3], label.light-yellow[_ngcontent-c3], p.light-yellow[_ngcontent-c3], span.light-yellow[_ngcontent-c3]{color:#fdc977}button.blue[_ngcontent-c3], div.blue[_ngcontent-c3]{background-color:#1a7bb9}a.blue[_ngcontent-c3], h1.blue[_ngcontent-c3], h2.blue[_ngcontent-c3], h3.blue[_ngcontent-c3], i.blue[_ngcontent-c3], label.blue[_ngcontent-c3], p.blue[_ngcontent-c3], span.blue[_ngcontent-c3]{color:#1a7bb9}button.green[_ngcontent-c3], div.green[_ngcontent-c3]{background-color:#6da067}a.green[_ngcontent-c3], h1.green[_ngcontent-c3], h2.green[_ngcontent-c3], h3.green[_ngcontent-c3], i.green[_ngcontent-c3], label.green[_ngcontent-c3], p.green[_ngcontent-c3], span.green[_ngcontent-c3]{color:#6da067}button.white[_ngcontent-c3], div.white[_ngcontent-c3]{background-color:#fff}a.white[_ngcontent-c3], h1.white[_ngcontent-c3], h2.white[_ngcontent-c3], h3.white[_ngcontent-c3], i.white[_ngcontent-c3], label.white[_ngcontent-c3], p.white[_ngcontent-c3], span.white[_ngcontent-c3]{color:#fff}button.facebook[_ngcontent-c3], div.facebook[_ngcontent-c3]{background-color:#324b7f}a.facebook[_ngcontent-c3], h1.facebook[_ngcontent-c3], h2.facebook[_ngcontent-c3], h3.facebook[_ngcontent-c3], i.facebook[_ngcontent-c3], label.facebook[_ngcontent-c3], p.facebook[_ngcontent-c3], span.facebook[_ngcontent-c3]{color:#324b7f}button.twitter[_ngcontent-c3], div.twitter[_ngcontent-c3]{background-color:#339dc3}a.twitter[_ngcontent-c3], h1.twitter[_ngcontent-c3], h2.twitter[_ngcontent-c3], h3.twitter[_ngcontent-c3], i.twitter[_ngcontent-c3], label.twitter[_ngcontent-c3], p.twitter[_ngcontent-c3], span.twitter[_ngcontent-c3]{color:#339dc3}button.google[_ngcontent-c3], div.google[_ngcontent-c3]{background-color:#dc4535}a.google[_ngcontent-c3], h1.google[_ngcontent-c3], h2.google[_ngcontent-c3], h3.google[_ngcontent-c3], i.google[_ngcontent-c3], label.google[_ngcontent-c3], p.google[_ngcontent-c3], span.google[_ngcontent-c3]{color:#dc4535}button.linkedin[_ngcontent-c3], div.linkedin[_ngcontent-c3]{background-color:#025a84}a.linkedin[_ngcontent-c3], h1.linkedin[_ngcontent-c3], h2.linkedin[_ngcontent-c3], h3.linkedin[_ngcontent-c3], i.linkedin[_ngcontent-c3], label.linkedin[_ngcontent-c3], p.linkedin[_ngcontent-c3], span.linkedin[_ngcontent-c3]{color:#025a84}.std-sh-panel-container[_ngcontent-c3]   .fx-button[_ngcontent-c3]   i[_ngcontent-c3]{font-size:22px;color:#fff}.std-sh-panel-container[_ngcontent-c3]   label[_ngcontent-c3]{display:none}.std-sh-panel-container[_ngcontent-c3]   .ss-button-container[_ngcontent-c3]{display:inline-block;margin-left:20px}.std-sh-panel-container[_ngcontent-c3]   .ss-button-container[_ngcontent-c3]:first-child{margin-left:0}</style></head><body><app-root _nghost-c0="" ng-version="4.3.6"><div _ngcontent-c0="" class="std-app-container fx-cover">
+    
+    <!---->
+
+    <view-stack _ngcontent-c0="" buttonicon="boson-icon-back" buttonposition="fx-left"><div></div><std-diagram-viewer><div class="fx-cover" style="transform: translateX(0); transition: transform 300ms ease-out;">
+    <div class="fx-cover" style="background-color: rgb(255, 255, 255);">
+        <loading-indicator classstring="fx-center-all fx-cover fx-large" spinnerclass="fx-icon boson-icon-bulb"><div class="fx-center-all fx-cover fx-large">
+                    <!----></div></loading-indicator>
+
+        <!---->
+        
+        <!----><div class="">
+            <click-area class="fx-cover"><div class="interactive-area" wheelscroll="" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+        </div></click-area>
+
+            <diagram-canvas class="std-app-canvas fx-cover fx-center-all" style="background-color: rgb(255, 255, 255);"><div class="fx-fix-top-left fx-cover diagram-svg-container"><div style="-webkit-transform: matrix(0.5402,0,0,0.5402,0,48.5996) ;-moz-transform: matrix(0.5402,0,0,0.5402,0,48.5996) ;-ms-transform: matrix(0.5402,0,0,0.5402,0,48.5996) ;-o-transform: matrix(0.5402,0,0,0.5402,0,48.5996) ;transform: matrix(0.5402,0,0,0.5402,0,48.5996) ;-webkit-transform-origin: top left;-moz-transform-origin: top left;-ms-transform-origin: top left;-o-transform-origin: top left;-transform-origin: top left;transform-origin: top left; transition: all 300ms;"><svg version="1.1" x="0" y="0" id="hpjv3rm02" diagram-revision="0" width="1205.05" height="806.7" xmlns="http://www.w3.org/2000/svg" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xlink="http://www.w3.org/1999/xlink" style="background-color: transparent;"><g>
+  <g id="Entity-hpjv3rm0-ko79" transform="translate(225,75)">
+    <desc>root/uml/er/entity?version=1&amp;author=Cinergix</desc>
+    <g id="image">
+      <rect vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" stroke-width="1.5" width="100" height="50" style="stroke-width:1.5;stroke:#5e5ca7;"></rect>
+    </g>
+    <text x="0" y="0" width="74" height="22.45" transform="translate(13,13.5)">
+      <tspan x="3.05" y="18.434758949279786" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">Company</tspan>
+    </text>
+  </g>
+  <g id="Key Attribute-hpjv3rm0-ko80" transform="translate(50,5)">
+    <desc>root/uml/er/keyAttribute?version=1&amp;author=Cinergix</desc>
+    <g id="image">
+      <ellipse vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" cx="50" cy="25" rx="50" ry="25" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></ellipse>
+    </g>
+    <text x="0" y="0" width="93" height="22.45" transform="translate(3.5,13.5)">
+      <tspan x="3.05" y="16.934758949279786" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">company_id</tspan>
+    </text>
+  </g>
+  <g id="Key Attribute-hpjv3rm0-ko81" transform="translate(50,75)">
+    <desc>root/uml/er/keyAttribute?version=1&amp;author=Cinergix</desc>
+    <g id="image" transform="scale(1.25,1)">
+      <ellipse vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" cx="50" cy="25" rx="50" ry="25" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></ellipse>
+    </g>
+    <text x="0" y="0" width="117" height="22.45" transform="translate(4,13.5)">
+      <tspan x="4.65" y="18.434758949279786" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">company_email</tspan>
+    </text>
+  </g>
+  <g id="Key Attribute-hpjv3rm0-ko82" transform="translate(50,145)">
+    <desc>root/uml/er/keyAttribute?version=1&amp;author=Cinergix</desc>
+    <g id="image" transform="scale(1.4171199798583984,1)">
+      <ellipse vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" cx="50" cy="25" rx="50" ry="25" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></ellipse>
+    </g>
+    <text x="0" y="0" width="137" height="22.45" transform="translate(2.35,13.5)">
+      <tspan x="4.6" y="16.934758949279786" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">company_address</tspan>
+    </text>
+  </g>
+  <g id="Connector-hpjv3rm0-ko85" transform="translate(0,-40)">
+    <g id="graphics">
+      
+      <path d="M 225 140 L 175 140 " fill="none" stroke="#5e5ca7" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></path>
+    </g>
+  </g>
+  <g id="Connector-hpjv3rm0-ko86" transform="translate(0,-40)">
+    <g id="graphics">
+      
+      <path d="M 225 140 L 200.3559989929199 140 L 200.3559989929199 210 L 190 210 " fill="none" stroke="#5e5ca7" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></path>
+    </g>
+  </g>
+  <g id="Entity-hpjv3rm0-ko87" transform="translate(580,120)">
+    <desc>root/uml/er/entity?version=1&amp;author=Cinergix</desc>
+    <g id="image">
+      <rect vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" stroke-width="1.5" width="100" height="50" style="stroke-width:1.5;stroke:#5e5ca7;"></rect>
+    </g>
+    <text x="0" y="0" width="67" height="22.45" transform="translate(16.5,13.5)">
+      <tspan x="4.6" y="16.884758949279785" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">Account</tspan>
+    </text>
+  </g>
+  <g id="Key Attribute-hpjv3rm0-ko88" transform="translate(480,20)">
+    <desc>root/uml/er/keyAttribute?version=1&amp;author=Cinergix</desc>
+    <g id="image">
+      <ellipse vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" cx="50" cy="25" rx="50" ry="25" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></ellipse>
+    </g>
+    <text x="0" y="0" width="87" height="22.45" transform="translate(6.5,13.5)">
+      <tspan x="4.6" y="16.884758949279785" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">account_id</tspan>
+    </text>
+  </g>
+  <g id="Key Attribute-hpjv3rm0-ko89" transform="translate(590,20)">
+    <desc>root/uml/er/keyAttribute?version=1&amp;author=Cinergix</desc>
+    <g id="image" transform="scale(1.149999976158142,1)">
+      <ellipse vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" cx="50" cy="25" rx="50" ry="25" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></ellipse>
+    </g>
+    <text x="0" y="0" width="104" height="22.45" transform="translate(5.45,13.5)">
+      <tspan x="6.15" y="16.884758949279785" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">account_type</tspan>
+    </text>
+  </g>
+  <g id="Key Attribute-hpjv3rm0-ko90" transform="translate(830,70)">
+    <desc>root/uml/er/keyAttribute?version=1&amp;author=Cinergix</desc>
+    <g id="image" transform="scale(1.5,1)">
+      <ellipse vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" cx="50" cy="25" rx="50" ry="25" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></ellipse>
+    </g>
+    <text x="0" y="0" width="144" height="22.45" transform="translate(3,13.5)">
+      <tspan x="6.15" y="16.934758949279786" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">account_username</tspan>
+    </text>
+  </g>
+  <g id="Key Attribute-hpjv3rm0-ko91" transform="translate(715,20)">
+    <desc>root/uml/er/keyAttribute?version=1&amp;author=Cinergix</desc>
+    <g id="image" transform="scale(1.5,1)">
+      <ellipse vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" cx="50" cy="25" rx="50" ry="25" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></ellipse>
+    </g>
+    <text x="0" y="0" width="142" height="22.45" transform="translate(4,13.5)">
+      <tspan x="4.6" y="16.884758949279785" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">account_password</tspan>
+    </text>
+  </g>
+  <g id="Connector-hpjv3rm0-ko92" transform="translate(0,-40)">
+    <g id="graphics">
+      
+      <path d="M 630 160 L 630 135 L 530 135 L 530 110 " fill="none" stroke="#5e5ca7" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></path>
+    </g>
+  </g>
+  <g id="Connector-hpjv3rm0-ko93" transform="translate(0,-40)">
+    <g id="graphics">
+      
+      <path d="M 630 160 L 630 135 L 645 135 L 645 110 " fill="none" stroke="#5e5ca7" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></path>
+    </g>
+  </g>
+  <g id="Connector-hpjv3rm0-ko94" transform="translate(0,-40)">
+    <g id="graphics">
+      
+      <path d="M 630 160 L 630 135 L 830 135 " fill="none" stroke="#5e5ca7" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></path>
+    </g>
+  </g>
+  <g id="Connector-hpjv3rm0-ko95" transform="translate(0,-40)">
+    <g id="graphics">
+      
+      <path d="M 630 160 L 630 134.92307692307685 L 790 134.92307692307685 L 790 110 " fill="none" stroke="#5e5ca7" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></path>
+    </g>
+  </g>
+  <g id="Connector-hpjv3rm0-ko96" transform="translate(0,-40)">
+    <g id="graphics">
+      
+      <path d="M 325 140 L 452.5 140 L 452.5 230 L 630 230 L 630 210 " fill="none" stroke="#5e5ca7" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></path>
+    </g>
+    <g id="fromIcon" transform="translate(325,140) rotate(-90)">
+      <line stroke="#5e5ca7" stroke-linecap="square" stroke-miterlimit="10" x1="5" y1="8" x2="-5" y2="8" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+      <line stroke="#5e5ca7" stroke-linecap="square" stroke-miterlimit="10" x1="0" y1="0" x2="0" y2="16" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+    </g>
+    <g id="toIcon" transform="translate(630,210)">
+      <line stroke="#5e5ca7" stroke-linecap="square" stroke-miterlimit="10" x1="-5" y1="18" x2="5" y2="18" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+      <line stroke="#5e5ca7" stroke-linecap="round" stroke-miterlimit="10" x1="0" y1="13" x2="-5" y2="0" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+      <line stroke="#5e5ca7" stroke-linecap="round" stroke-miterlimit="10" x1="0" y1="13" x2="5" y2="0" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+      <line stroke="#5e5ca7" stroke-linecap="square" stroke-miterlimit="10" x1="0" y1="0" x2="0" y2="24" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+    </g>
+  </g>
+  <g id="Relationship-hpjv3rm0-ko97" transform="translate(405,115)">
+    <desc>root/uml/er/relationship?version=1&amp;author=Cinergix</desc>
+    <g id="image">
+      <polygon vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" points="100,25 50,50 0,25 50,0 " style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></polygon>
+    </g>
+    <text x="0" y="0" width="67" height="22.45" transform="translate(16.5,13.5)">
+      <tspan x="4.65" y="18.434758949279786" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">Has (an)</tspan>
+    </text>
+  </g>
+  <g id="Entity-hpjv3rm0-ko98" transform="translate(225,250)">
+    <desc>root/uml/er/entity?version=1&amp;author=Cinergix</desc>
+    <g id="image">
+      <rect vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" stroke-width="1.5" width="100" height="50" style="stroke-width:1.5;stroke:#5e5ca7;"></rect>
+    </g>
+    <text x="0" y="0" width="61" height="22.45" transform="translate(19.5,13.5)">
+      <tspan x="4.6" y="16.934758949279786" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">Gadget</tspan>
+    </text>
+  </g>
+  <g id="Connector-hpjv3rm0-ko100" transform="translate(0,-40)">
+    <g id="graphics">
+      
+      <path d="M 150 70 L 200 70 L 200 140 L 225 140 " fill="none" stroke="#5e5ca7" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></path>
+    </g>
+  </g>
+  <g id="Connector-hpjv3rm0-ko99" transform="translate(0,-40)">
+    <g id="graphics">
+      
+      <path d="M 275 165 L 275 290 " fill="none" stroke="#5e5ca7" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></path>
+    </g>
+    <g id="fromIcon" transform="translate(275,165)">
+      <line stroke="#5e5ca7" stroke-linecap="square" stroke-miterlimit="10" x1="5" y1="6" x2="-5" y2="6" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+      <line stroke="#5e5ca7" stroke-linecap="square" stroke-miterlimit="10" x1="5" y1="10" x2="-5" y2="10" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+      <line stroke="#5e5ca7" stroke-linecap="square" stroke-miterlimit="10" x1="0" y1="0" x2="0" y2="16" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+    </g>
+    <g id="toIcon" transform="translate(275,290) rotate(180)">
+      <line stroke="#5e5ca7" stroke-linecap="square" stroke-miterlimit="10" x1="-5" y1="18" x2="5" y2="18" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+      <line stroke="#5e5ca7" stroke-linecap="round" stroke-miterlimit="10" x1="0" y1="13" x2="-5" y2="0" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+      <line stroke="#5e5ca7" stroke-linecap="round" stroke-miterlimit="10" x1="0" y1="13" x2="5" y2="0" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+      <line stroke="#5e5ca7" stroke-linecap="square" stroke-miterlimit="10" x1="0" y1="0" x2="0" y2="24" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+    </g>
+  </g>
+  <g id="Entity-hpjv3rm0-ko102" transform="translate(220,540)">
+    <desc>root/uml/er/entity?version=1&amp;author=Cinergix</desc>
+    <g id="image" transform="scale(1.100000023841858,1)">
+      <rect vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" stroke-width="1.5" width="100" height="50" style="stroke-width:1.5;stroke:#5e5ca7;"></rect>
+    </g>
+    <text x="0" y="0" width="102" height="22.45" transform="translate(4,13.5)">
+      <tspan x="6.15" y="16.934758949279786" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">Gadget_Type</tspan>
+    </text>
+  </g>
+  <g id="Key Attribute-hpjv3rm0-ko103" transform="translate(80,350)">
+    <desc>root/uml/er/keyAttribute?version=1&amp;author=Cinergix</desc>
+    <g id="image">
+      <ellipse vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" cx="50" cy="25" rx="50" ry="25" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></ellipse>
+    </g>
+    <text x="0" y="0" width="80" height="22.45" transform="translate(10,13.5)">
+      <tspan x="4.6" y="16.934758949279786" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">gadget_id</tspan>
+    </text>
+  </g>
+  <g id="Connector-hpjv3rm0-ko104" transform="translate(0,-40)">
+    <g id="graphics">
+      
+      <path d="M 275 340 L 275 365 L 130 365 L 130 390 " fill="none" stroke="#5e5ca7" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></path>
+    </g>
+  </g>
+  <g id="Key Attribute-hpjv3rm0-ko105" transform="translate(200,350)">
+    <desc>root/uml/er/keyAttribute?version=1&amp;author=Cinergix</desc>
+    <g id="image" transform="scale(1.100000023841858,1)">
+      <ellipse vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" cx="50" cy="25" rx="50" ry="25" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></ellipse>
+    </g>
+    <text x="0" y="0" width="105" height="22.45" transform="translate(2.5,13.5)">
+      <tspan x="6.15" y="16.934758949279786" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">gadget_name</tspan>
+    </text>
+  </g>
+  <g id="Connector-hpjv3rm0-ko106" transform="translate(0,-40)">
+    <g id="graphics">
+      
+      <path d="M 255 390 L 255 365 L 275 365 L 275 340 " fill="none" stroke="#5e5ca7" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></path>
+    </g>
+  </g>
+  <g id="Key Attribute-hpjv3rm0-ko107" transform="translate(135,410)">
+    <desc>root/uml/er/keyAttribute?version=1&amp;author=Cinergix</desc>
+    <g id="image" transform="scale(1.100000023841858,1)">
+      <ellipse vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" cx="50" cy="25" rx="50" ry="25" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></ellipse>
+    </g>
+    <text x="0" y="0" width="103" height="22.45" transform="translate(3.5,13.5)">
+      <tspan x="6.15" y="16.934758949279786" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">gadget_price</tspan>
+    </text>
+  </g>
+  <g id="Connector-hpjv3rm0-ko108" transform="translate(0,-40)">
+    <g id="graphics">
+      
+      <path d="M 190 450 L 190 369.0000000000003 L 275 369.0000000000003 L 275 340 " fill="none" stroke="#5e5ca7" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></path>
+    </g>
+  </g>
+  <g id="Connector-hpjv3rm0-ko110" transform="translate(0,-40)">
+    <g id="graphics">
+      
+      <path d="M 225 315 L 55 315 L 55 605 L 220 605 " fill="none" stroke="#5e5ca7" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></path>
+    </g>
+    <g id="fromIcon" transform="translate(225,315) rotate(90)">
+      <line stroke="#5e5ca7" stroke-linecap="square" stroke-miterlimit="10" x1="5" y1="8" x2="-5" y2="8" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+      <line stroke="#5e5ca7" stroke-linecap="square" stroke-miterlimit="10" x1="0" y1="0" x2="0" y2="16" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+    </g>
+    <g id="toIcon" transform="translate(220,605) rotate(90)">
+      <line stroke="#5e5ca7" stroke-linecap="square" stroke-miterlimit="10" x1="5" y1="8" x2="-5" y2="8" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+      <line stroke="#5e5ca7" stroke-linecap="square" stroke-miterlimit="10" x1="0" y1="0" x2="0" y2="16" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+    </g>
+  </g>
+  <g id="Relationship-hpjv3rm0-ko111" transform="translate(225,165)">
+    <desc>root/uml/er/relationship?version=1&amp;author=Cinergix</desc>
+    <g id="image">
+      <polygon vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" points="100,25 50,50 0,25 50,0 " style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></polygon>
+    </g>
+    <text x="0" y="0" width="58" height="22.45" transform="translate(21,12.5)">
+      <tspan x="4.6" y="16.934758949279786" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">Has (a)</tspan>
+    </text>
+  </g>
+  <g id="Key Attribute-hpjv3rm0-ko112" transform="translate(30,600)">
+    <desc>root/uml/er/keyAttribute?version=1&amp;author=Cinergix</desc>
+    <g id="image" transform="scale(1.2999999523162842,1)">
+      <ellipse vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" cx="50" cy="25" rx="50" ry="25" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></ellipse>
+    </g>
+    <text x="0" y="0" width="118" height="22.45" transform="translate(5.95,13.5)">
+      <tspan x="4.6" y="16.934758949279786" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">gadget_type_id</tspan>
+    </text>
+  </g>
+  <g id="Connector-hpjv3rm0-ko113" transform="translate(0,-40)">
+    <g id="graphics">
+      
+      <path d="M 160 665 L 275 665 L 275 630 " fill="none" stroke="#5e5ca7" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></path>
+    </g>
+  </g>
+  <g id="Key Attribute-hpjv3rm0-ko114" transform="translate(285,680)">
+    <desc>root/uml/er/keyAttribute?version=1&amp;author=Cinergix</desc>
+    <g id="image" transform="scale(1.5499999523162842,1)">
+      <ellipse vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" cx="50" cy="25" rx="50" ry="25" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></ellipse>
+    </g>
+    <text x="0" y="0" width="146" height="22.45" transform="translate(4.45,13.5)">
+      <tspan x="6.15" y="16.934758949279786" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">gadget_type_brand</tspan>
+    </text>
+  </g>
+  <g id="Connector-hpjv3rm0-ko115" transform="translate(0,-40)">
+    <g id="graphics">
+      
+      <path d="M 360 720 L 360 695 L 275 695 L 275 630 " fill="none" stroke="#5e5ca7" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></path>
+    </g>
+  </g>
+  <g id="Key Attribute-hpjv3rm0-ko116" transform="translate(255,410)">
+    <desc>root/uml/er/keyAttribute?version=1&amp;author=Cinergix</desc>
+    <g id="image" transform="scale(1.2000000476837158,1)">
+      <ellipse vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" cx="50" cy="25" rx="50" ry="25" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></ellipse>
+    </g>
+    <text x="0" y="0" width="110" height="22.45" transform="translate(5,13.5)">
+      <tspan x="4.6" y="16.934758949279786" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">gadget_model</tspan>
+    </text>
+  </g>
+  <g id="Connector-hpjv3rm0-ko117" transform="translate(0,-40)">
+    <g id="graphics">
+      
+      <path d="M 315 450 L 315 369.0000000000003 L 275 369.0000000000003 L 275 340 " fill="none" stroke="#5e5ca7" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></path>
+    </g>
+  </g>
+  <g id="Key Attribute-hpjv3rm0-ko118" transform="translate(60,675)">
+    <desc>root/uml/er/keyAttribute?version=1&amp;author=Cinergix</desc>
+    <g id="image" transform="scale(2.1500000953674316,1.2301483154296875)">
+      <ellipse vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" cx="50" cy="25" rx="50" ry="25" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></ellipse>
+    </g>
+    <text x="0" y="0" width="197" height="22.45" transform="translate(9,19.25)">
+      <tspan x="6.15" y="16.934758949279786" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">gadget_type_classification</tspan>
+    </text>
+  </g>
+  <g id="Connector-hpjv3rm0-ko119" transform="translate(0,-40)">
+    <g id="graphics">
+      
+      <path d="M 170 715 L 170 695 L 275 695 L 275 665 L 275 665 L 275 630 " fill="none" stroke="#5e5ca7" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></path>
+    </g>
+  </g>
+  <g id="Entity-hpjv3rm0-ko120" transform="translate(590,385)">
+    <desc>root/uml/er/entity?version=1&amp;author=Cinergix</desc>
+    <g id="image">
+      <rect vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" stroke-width="1.5" width="100" height="50" style="stroke-width:1.5;stroke:#5e5ca7;"></rect>
+    </g>
+    <text x="0" y="0" width="62" height="22.45" transform="translate(19,13.5)">
+      <tspan x="6.15" y="16.934758949279786" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">Review</tspan>
+    </text>
+  </g>
+  <g id="Key Attribute-hpjv3rm0-ko121" transform="translate(590,485)">
+    <desc>root/uml/er/keyAttribute?version=1&amp;author=Cinergix</desc>
+    <g id="image">
+      <ellipse vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" cx="50" cy="25" rx="50" ry="25" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></ellipse>
+    </g>
+    <text x="0" y="0" width="79" height="22.45" transform="translate(10.5,13.5)">
+      <tspan x="6.2" y="16.934758949279786" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">review_id</tspan>
+    </text>
+  </g>
+  <g id="Key Attribute-hpjv3rm0-ko122" transform="translate(700,485)">
+    <desc>root/uml/er/keyAttribute?version=1&amp;author=Cinergix</desc>
+    <g id="image" transform="scale(1.25,1)">
+      <ellipse vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" cx="50" cy="25" rx="50" ry="25" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></ellipse>
+    </g>
+    <text x="0" y="0" width="115" height="22.45" transform="translate(5,13.5)">
+      <tspan x="6.15" y="16.934758949279786" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">review_ratings</tspan>
+    </text>
+  </g>
+  <g id="Key Attribute-hpjv3rm0-ko123" transform="translate(620,540)">
+    <desc>root/uml/er/keyAttribute?version=1&amp;author=Cinergix</desc>
+    <g id="image" transform="scale(1.5,1)">
+      <ellipse vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" cx="50" cy="25" rx="50" ry="25" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></ellipse>
+    </g>
+    <text x="0" y="0" width="138" height="22.45" transform="translate(6,13.5)">
+      <tspan x="6.15" y="16.934758949279786" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">review_comments</tspan>
+    </text>
+  </g>
+  <g id="Connector-hpjv3rm0-ko124" transform="translate(0,-40)">
+    <g id="graphics">
+      
+      <path d="M 640 475 L 640 503.076923076923 L 695.0000000000001 503.076923076923 L 695.0000000000001 580 " fill="none" stroke="#5e5ca7" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></path>
+    </g>
+  </g>
+  <g id="Connector-hpjv3rm0-ko125" transform="translate(0,-40)">
+    <g id="graphics">
+      
+      <path d="M 640 475 L 640 525 " fill="none" stroke="#5e5ca7" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></path>
+    </g>
+  </g>
+  <g id="Connector-hpjv3rm0-ko126" transform="translate(0,-40)">
+    <g id="graphics">
+      
+      <path d="M 640 475 L 640 503.076923076923 L 765.0000000000001 503.076923076923 L 765.0000000000001 525 " fill="none" stroke="#5e5ca7" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></path>
+    </g>
+  </g>
+  <g id="Relationship-hpjv3rm0-ko101" transform="translate(5,485)">
+    <desc>root/uml/er/relationship?version=1&amp;author=Cinergix</desc>
+    <g id="image">
+      <polygon vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" points="100,25 50,50 0,25 50,0 " style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></polygon>
+    </g>
+    <text x="0" y="0" width="58" height="22.45" transform="translate(21,13.5)">
+      <tspan x="4.6" y="16.934758949279786" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">Has (a)</tspan>
+    </text>
+  </g>
+  <g id="Entity-hpjv3rm0-ko127" transform="translate(880,255)">
+    <desc>root/uml/er/entity?version=1&amp;author=Cinergix</desc>
+    <g id="image">
+      <rect vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" stroke-width="1.5" width="100" height="50" style="stroke-width:1.5;stroke:#5e5ca7;"></rect>
+    </g>
+    <text x="0" y="0" width="42.3" height="22.45" transform="translate(28.85,13.25)">
+      <tspan x="4.65" y="16.884758949279785" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">User</tspan>
+    </text>
+  </g>
+  <g id="Connector-hpjv3rm0-ko128" transform="translate(0,-40)">
+    <g id="graphics">
+      
+      <path d="M 880 320 L 630 320 L 630 210 " fill="none" stroke="#5e5ca7" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></path>
+    </g>
+    <g id="fromIcon" transform="translate(880,320) rotate(90)">
+      <line stroke="#5e5ca7" stroke-linecap="square" stroke-miterlimit="10" x1="-5" y1="18" x2="5" y2="18" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+      <line stroke="#5e5ca7" stroke-linecap="round" stroke-miterlimit="10" x1="0" y1="13" x2="-5" y2="0" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+      <line stroke="#5e5ca7" stroke-linecap="round" stroke-miterlimit="10" x1="0" y1="13" x2="5" y2="0" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+      <line stroke="#5e5ca7" stroke-linecap="square" stroke-miterlimit="10" x1="0" y1="0" x2="0" y2="24" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+    </g>
+    <g id="toIcon" transform="translate(630,210)">
+      <line stroke="#5e5ca7" stroke-linecap="square" stroke-miterlimit="10" x1="-5" y1="18" x2="5" y2="18" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+      <line stroke="#5e5ca7" stroke-linecap="round" stroke-miterlimit="10" x1="0" y1="13" x2="-5" y2="0" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+      <line stroke="#5e5ca7" stroke-linecap="round" stroke-miterlimit="10" x1="0" y1="13" x2="5" y2="0" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+      <line stroke="#5e5ca7" stroke-linecap="square" stroke-miterlimit="10" x1="0" y1="0" x2="0" y2="24" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+    </g>
+  </g>
+  <g id="hpjv3rm0-ko129" transform="translate(580,215)">
+    <desc>root/uml/er/relationship?version=1&amp;author=Cinergix</desc>
+    <g id="image">
+      <polygon vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" points="100,25 50,50 0,25 50,0 " style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></polygon>
+    </g>
+    <text x="0" y="0" width="66.9" height="22.45" transform="translate(16.5,13.25)">
+      <tspan x="4.6" y="16.884758949279785" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">Has (an)</tspan>
+    </text>
+  </g>
+  <g id="Connector-hpjv3rm0-ko131" transform="translate(0,-40)">
+    <g id="graphics">
+      
+      <path d="M 930 345 L 930 450 L 690.0000000000001 450 " fill="none" stroke="#5e5ca7" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></path>
+    </g>
+    <g id="fromIcon" transform="translate(930,345)">
+      <line stroke="#5e5ca7" stroke-linecap="square" stroke-miterlimit="10" x1="5" y1="6" x2="-5" y2="6" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+      <line stroke="#5e5ca7" stroke-linecap="square" stroke-miterlimit="10" x1="5" y1="10" x2="-5" y2="10" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+      <line stroke="#5e5ca7" stroke-linecap="square" stroke-miterlimit="10" x1="0" y1="0" x2="0" y2="16" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+    </g>
+    <g id="toIcon" transform="translate(690,450) rotate(-90)">
+      <line stroke="#5e5ca7" stroke-linecap="square" stroke-miterlimit="10" x1="-5" y1="18" x2="5" y2="18" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+      <line stroke="#5e5ca7" stroke-linecap="round" stroke-miterlimit="10" x1="0" y1="13" x2="-5" y2="0" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+      <line stroke="#5e5ca7" stroke-linecap="round" stroke-miterlimit="10" x1="0" y1="13" x2="5" y2="0" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+      <line stroke="#5e5ca7" stroke-linecap="square" stroke-miterlimit="10" x1="0" y1="0" x2="0" y2="24" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+    </g>
+  </g>
+  <g id="hpjv3rm0-ko132" transform="translate(770,385)">
+    <desc>root/uml/er/relationship?version=1&amp;author=Cinergix</desc>
+    <g id="image">
+      <polygon vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" points="100,25 50,50 0,25 50,0 " style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></polygon>
+    </g>
+    <text x="0" y="0" width="70" height="22.45" transform="translate(15,13.25)">
+      <tspan x="4.6" y="16.934758949279786" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">Posts (a)</tspan>
+    </text>
+  </g>
+  <g id="Connector-hpjv3rm0-ko134" transform="translate(0,-40)">
+    <g id="graphics">
+      
+      <path d="M 325 315 L 455 315 L 455 450 L 590 450 " fill="none" stroke="#5e5ca7" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></path>
+    </g>
+    <g id="fromIcon" transform="translate(325,315) rotate(-90)">
+      <line stroke="#5e5ca7" stroke-linecap="square" stroke-miterlimit="10" x1="-5" y1="18" x2="5" y2="18" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+      <line stroke="#5e5ca7" stroke-linecap="round" stroke-miterlimit="10" x1="0" y1="13" x2="-5" y2="0" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+      <line stroke="#5e5ca7" stroke-linecap="round" stroke-miterlimit="10" x1="0" y1="13" x2="5" y2="0" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+      <line stroke="#5e5ca7" stroke-linecap="square" stroke-miterlimit="10" x1="0" y1="0" x2="0" y2="24" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+    </g>
+    <g id="toIcon" transform="translate(590,450) rotate(90)">
+      <line stroke="#5e5ca7" stroke-linecap="square" stroke-miterlimit="10" x1="-5" y1="18" x2="5" y2="18" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+      <line stroke="#5e5ca7" stroke-linecap="round" stroke-miterlimit="10" x1="0" y1="13" x2="-5" y2="0" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+      <line stroke="#5e5ca7" stroke-linecap="round" stroke-miterlimit="10" x1="0" y1="13" x2="5" y2="0" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+      <line stroke="#5e5ca7" stroke-linecap="square" stroke-miterlimit="10" x1="0" y1="0" x2="0" y2="24" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+    </g>
+  </g>
+  <g id="Key Attribute-hpjv3rm0-ko137" transform="translate(820,175)">
+    <desc>root/uml/er/keyAttribute?version=1&amp;author=Cinergix</desc>
+    <g id="image" transform="scale(1.0007785558700562,1.000009298324585)">
+      <ellipse vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" cx="50" cy="25" rx="50" ry="25" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></ellipse>
+    </g>
+    <text x="0" y="0" width="62.3" height="22.45" transform="translate(18.85,13.25)">
+      <tspan x="4.6" y="16.884758949279785" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">user_id</tspan>
+    </text>
+  </g>
+  <g id="Key Attribute-hpjv3rm0-ko138" transform="translate(935,175)">
+    <desc>root/uml/er/keyAttribute?version=1&amp;author=Cinergix</desc>
+    <g id="image" transform="scale(1.1952243953112114,1)">
+      <ellipse vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" cx="50" cy="25" rx="50" ry="25" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></ellipse>
+    </g>
+    <text x="0" y="0" width="112.85" height="22.45" transform="translate(3.3,12.85)">
+      <tspan x="3.1" y="16.884758949279785" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">user_firstName</tspan>
+    </text>
+  </g>
+  <g id="Key Attribute-hpjv3rm0-ko139" transform="translate(1085,175)">
+    <desc>root/uml/er/keyAttribute?version=1&amp;author=Cinergix</desc>
+    <g id="image" transform="scale(1.145453685783295,1)">
+      <ellipse vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" cx="50" cy="25" rx="50" ry="25" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></ellipse>
+    </g>
+    <text x="0" y="0" width="110" height="22.45" transform="translate(2.25,12.85)">
+      <tspan x="3.05" y="16.884758949279785" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">user_lastName</tspan>
+    </text>
+  </g>
+  <g id="Key Attribute-hpjv3rm0-ko140" transform="translate(1010,110)">
+    <desc>root/uml/er/keyAttribute?version=1&amp;author=Cinergix</desc>
+    <g id="image" transform="scale(1.050004482269287,1.0000044107437134)">
+      <ellipse vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" cx="50" cy="25" rx="50" ry="25" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></ellipse>
+    </g>
+    <text x="0" y="0" width="82.85" height="22.45" transform="translate(11.05,12.85)">
+      <tspan x="3.05" y="16.934758949279786" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">user_email</tspan>
+    </text>
+  </g>
+  <g id="Connector-hpjv3rm0-ko141" transform="translate(0,-40)">
+    <g id="graphics">
+      
+      <path d="M 870 265 L 870 280.0002324581146 L 930 280.0002324581146 L 930 295 " fill="none" stroke="#5e5ca7" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></path>
+    </g>
+  </g>
+  <g id="Connector-hpjv3rm0-ko142" transform="translate(0,-40)">
+    <g id="graphics">
+      
+      <path d="M 995 265 L 995 280.00011026859283 L 930 280.00011026859283 L 930 295 " fill="none" stroke="#5e5ca7" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></path>
+    </g>
+  </g>
+  <g id="Connector-hpjv3rm0-ko143" transform="translate(0,-40)">
+    <g id="graphics">
+      
+      <path d="M 1140 265 L 1140 280.00087320804596 L 930 280.00087320804596 L 930 295 " fill="none" stroke="#5e5ca7" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></path>
+    </g>
+  </g>
+  <g id="Connector-hpjv3rm0-ko144" transform="translate(0,-40)">
+    <g id="graphics">
+      
+      <path d="M 1065 200 L 1065 280 L 930 280 L 930 295 " fill="none" stroke="#5e5ca7" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></path>
+    </g>
+  </g>
+  <g id="Entity-hpjv3rm0-ko145" transform="translate(640,650)">
+    <desc>root/uml/er/entity?version=1&amp;author=Cinergix</desc>
+    <g id="image" transform="scale(1.30078125,1.000009298324585)">
+      <rect vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" stroke-width="1.5" width="100" height="50" style="stroke-width:1.5;stroke:#5e5ca7;"></rect>
+    </g>
+    <text x="0" y="0" width="103.85" height="22.45" transform="translate(13.1,13.25)">
+      <tspan x="4.6" y="16.934758949279786" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">Administrator</tspan>
+    </text>
+  </g>
+  <g id="Key Attribute-hpjv3rm0-ko146" transform="translate(550,745)">
+    <desc>root/uml/er/keyAttribute?version=1&amp;author=Cinergix</desc>
+    <g id="image" transform="scale(1.30078125,1.000009298324585)">
+      <ellipse vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" cx="50" cy="25" rx="50" ry="25" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></ellipse>
+    </g>
+    <text x="0" y="0" width="125.4" height="22.45" transform="translate(2.3,13.25)">
+      <tspan x="4.6" y="16.934758949279786" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">administrator_id</tspan>
+    </text>
+  </g>
+  <g id="Key Attribute-hpjv3rm0-ko147" transform="translate(690,745)">
+    <desc>root/uml/er/keyAttribute?version=1&amp;author=Cinergix</desc>
+    <g id="image" transform="scale(1.6507939100265503,1.00001859664917)">
+      <ellipse vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" cx="50" cy="25" rx="50" ry="25" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></ellipse>
+    </g>
+    <text x="0" y="0" width="148.45" height="22.45" transform="translate(8.3,13.25)">
+      <tspan x="4.6" y="16.934758949279786" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">administrator_email</tspan>
+    </text>
+  </g>
+  <g id="Connector-hpjv3rm0-ko148" transform="translate(0,-40)">
+    <g id="graphics">
+      
+      <path d="M 615 785 L 615 762.5002324581146 L 705.0000000000001 762.5002324581146 L 705.0000000000001 740 " fill="none" stroke="#5e5ca7" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></path>
+    </g>
+  </g>
+  <g id="Connector-hpjv3rm0-ko149" transform="translate(0,-40)">
+    <g id="graphics">
+      
+      <path d="M 775.0000000000001 785 L 775.0000000000001 762.5002324581146 L 705.0000000000001 762.5002324581146 L 705.0000000000001 740 " fill="none" stroke="#5e5ca7" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></path>
+    </g>
+  </g>
+  <g id="Connector-hpjv3rm0-ko151" transform="translate(0,-40)">
+    <g id="graphics">
+      
+      <path d="M 705.0000000000001 690 L 705.0000000000001 660 L 454.9230769230771 660 L 454.9230769230771 315 L 325 315 " fill="none" stroke="#5e5ca7" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></path>
+    </g>
+    <g id="fromIcon" transform="translate(705,690) rotate(180)">
+      <line stroke="#5e5ca7" stroke-linecap="square" stroke-miterlimit="10" x1="5" y1="6" x2="-5" y2="6" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+      <line stroke="#5e5ca7" stroke-linecap="square" stroke-miterlimit="10" x1="5" y1="10" x2="-5" y2="10" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+      <line stroke="#5e5ca7" stroke-linecap="square" stroke-miterlimit="10" x1="0" y1="0" x2="0" y2="16" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></line>
+    </g>
+  </g>
+  <g id="hpjv3rm0-ko135" transform="translate(405,320)">
+    <desc>root/uml/er/relationship?version=1&amp;author=Cinergix</desc>
+    <g id="image">
+      <polygon vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" points="100,25 50,50 0,25 50,0 " style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></polygon>
+    </g>
+    <text x="0" y="0" width="57.7" height="22.45" transform="translate(21.15,13.25)">
+      <tspan x="4.6" y="16.934758949279786" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">Has (a)</tspan>
+    </text>
+  </g>
+  <g id="hpjv3rm0-ko152" transform="translate(405,540)">
+    <desc>root/uml/er/relationship?version=1&amp;author=Cinergix</desc>
+    <g id="image">
+      <polygon vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" points="100,25 50,50 0,25 50,0 " style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></polygon>
+    </g>
+    <text x="0" y="0" width="66.9" height="22.45" transform="translate(16.5,13.25)">
+      <tspan x="4.65" y="16.934758949279786" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">Handles</tspan>
+    </text>
+  </g>
+  <g id="Key Attribute-hpjv3rm0-ko154" transform="translate(830,650)">
+    <desc>root/uml/er/keyAttribute?version=1&amp;author=Cinergix</desc>
+    <g id="image">
+      <ellipse vector-effect="non-scaling-stroke" fill="#FFFFFF" stroke="#5e5ca7" cx="50" cy="25" rx="50" ry="25" style="stroke-width:1.5;stroke:#5e5ca7;" stroke-width="1.5"></ellipse>
+    </g>
+    <text x="0" y="0" width="65.55" height="22.45" transform="translate(17.2,12.5)">
+      <tspan x="4.6" y="16.934758949279786" style="font-family:Arial;font-size:14px;fill:#000000;font-weight:bold;">account</tspan>
+    </text>
+  </g>
+  <g id="Connector-hpjv3rm0-ko155" transform="translate(0,-40)">
+    <g id="graphics">
+      
+      <path d="M 770.0000000000001 715 L 830 715 " fill="none" stroke="#5e5ca7" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></path>
+    </g>
+  </g>
+<defs></defs></g></svg></div></div></diagram-canvas>
+
+            <indicators-layer><svg class="il-container"><desc>Created with Snap</desc><defs></defs></svg></indicators-layer>
+
+            <app-toolbar _nghost-c1=""><div _ngcontent-c1="" class="tb-container fx-floating fx-fix-bottom">
+
+    <div _ngcontent-c1="" class="tb-btn-container tb-btn-container-left fx-no-float fx-left fx-span-height">
+        <!---->
+    </div>
+
+    <div _ngcontent-c1="" class="tb-btn-container tb-btn-container-center fx-center fx-span-height">
+        <toolbar-button btnicon="boson-icon-zoom-in" center="" class="tbb-zoom-in ng-tns-c2-0" tooltiptext="Zoom In" _nghost-c2=""><!---->
+
+<button _ngcontent-c2="" class="tb-button fx-button fx-icon fx-bg-transition">
+    <i _ngcontent-c2="" class="boson-icon-zoom-in tbb-icon"><!----></i>
+    <!---->
+</button></toolbar-button><toolbar-button btnicon="boson-icon-zoom-out" center="" class="tbb-zoom-out ng-tns-c2-1" tooltiptext="Zoom Out" _nghost-c2=""><!---->
+
+<button _ngcontent-c2="" class="tb-button fx-button fx-icon fx-bg-transition">
+    <i _ngcontent-c2="" class="boson-icon-zoom-out tbb-icon"><!----></i>
+    <!---->
+</button></toolbar-button><toolbar-button btnicon="boson-icon-zoom-100" center="" class="tbb-actual-size ng-tns-c2-2" tooltiptext="Actual Size" _nghost-c2=""><!---->
+
+<button _ngcontent-c2="" class="tb-button fx-button fx-icon fx-bg-transition">
+    <i _ngcontent-c2="" class="boson-icon-zoom-100 tbb-icon"><!----></i>
+    <!---->
+</button></toolbar-button><toolbar-button btnicon="boson-icon-fit-to-screen" center="" class="tbb-fit-to-screen ng-tns-c2-3" tooltiptext="Fit To Screen" _nghost-c2=""><!---->
+
+<button _ngcontent-c2="" class="tb-button fx-button fx-icon fx-bg-transition">
+    <i _ngcontent-c2="" class="boson-icon-fit-to-screen tbb-icon"><!----></i>
+    <!---->
+</button></toolbar-button><!----><toolbar-button btnicon="boson-icon-full-screen" center="" class="tbb-full-screen ng-tns-c2-4" tooltiptext="Full Screen" _nghost-c2=""><!---->
+
+<button _ngcontent-c2="" class="tb-button fx-button fx-icon fx-bg-transition">
+    <i _ngcontent-c2="" class="boson-icon-full-screen tbb-icon"><!----></i>
+    <!---->
+</button></toolbar-button><!---->
+    </div>
+
+    <div _ngcontent-c1="" class="tb-btn-container tb-btn-container-right fx-no-float fx-right fx-span-height">
+        <!----><toolbar-button btnicon="boson-icon-share-thick green" class="tbb-share ng-tns-c2-5" right="" _nghost-c2=""><!---->
+
+<button _ngcontent-c2="" class="tb-button fx-button fx-icon fx-bg-transition">
+    <i _ngcontent-c2="" class="boson-icon-share-thick green tbb-icon"><!----></i>
+    <!---->
+</button></toolbar-button><!---->
+    </div>
+
+</div></app-toolbar>
+        </div> 
+    </div>
+</div>
+
+<!---->
+</std-diagram-viewer>
+                <!----></view-stack>
+    
+</div>
+
+</app-root><script type="text/javascript" src="./inline.5027245262278c335951.bundle.js.download"></script><script type="text/javascript" src="./polyfills.a5df6df2cf72cdef99d2.bundle.js.download"></script><script type="text/javascript" src="./vendor.d801f2c039075b2bb436.bundle.js.download"></script><script type="text/javascript" src="./main.bf0dbf11ec501d857dee.bundle.js.download"></script></body></html>

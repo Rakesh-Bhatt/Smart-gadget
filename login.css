@@ -1,0 +1,124 @@
+body
+{
+	margin: 0px;
+	padding: 0px;
+	background-image: url("apex.jpg");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+#login-box
+{
+	width: 300px;
+	height: 320px;
+	background: rgba(0,0,0,0.5);
+	color: #fff;
+	margin-top: 300px;
+	margin-left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	box-sizing: border-box;
+	border-radius: 6px;
+
+
+}
+#avtar
+{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	position: absolute;
+	margin-top: -50px;
+	margin-left: calc(50% - 50px);
+}
+label
+{
+	font-family: 'Oswald', sans-serif;
+	font-weight: 200;
+}
+h2
+{
+	margin-top: 40px;
+	margin-left: 30px;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 600;
+
+}
+#loginform
+{
+	margin-left: 50px;
+}
+#username
+{
+	height: 25px;
+	width: 200px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	border: none;
+	background-color: transparent;
+	border-bottom: 1px solid #fff;
+	outline: none;
+	font-size: 16px;
+	color: #fff;
+}
+#password
+{
+	margin-top: 5px;
+	margin-bottom: 30px;
+	height: 25px;
+	width: 200px;
+	border: none;
+	background-color: transparent;
+	border-bottom: 1px solid #fff;
+	outline: none;
+	font-size: 16px;
+	color: #fff;
+}
+
+#login
+{
+	background-color: #93cbe2;
+	width: 200px;
+	height: 25px;
+	border-radius: 6px;
+	border: none; 
+	margin-bottom: 5px;
+}
+#login:hover
+{
+	background-color: #72b4d0;
+	width: 200px;
+	height: 25px;
+	border-radius: 6px;
+	border: none; 
+}
+#frgpass
+{
+	margin-top: 15px;
+	margin-left: 50px;
+}
+#frgpass a
+{
+	text-decoration: none;
+	color: #fff;
+}
+#frgpass a:hover
+{
+	color: blue;
+}
+.register 
+{
+	margin-left: 25px;
+}
+#usernamestyle
+{
+	color: red;
+	margin-top: -5px;
+	margin-bottom: 10px;
+}
+#passwordstyle
+{
+	color: red;
+	margin-top: -25px;
+	margin-bottom: 10px;
+}

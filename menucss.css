@@ -1,0 +1,88 @@
+*
+{
+  font: times new roman;
+}
+/*for black menu*/
+#top a,#top {
+  text-decoration: none;
+  width: 100%;
+  height:40px;
+  color:white;
+  background-color: black ;
+  padding: 5px;
+}
+/*end of black top menu*/
+/*for social media*/
+.social {
+    float: right;
+    text-align: center;
+    width: 250px;
+    }
+    
+.social img {
+      width: 40px;
+      margin-top: 25px;
+}
+/*social media ended*/
+.topnav a.active
+{
+  color: black;
+  background-color: #2196F3;
+
+}
+
+.topnav a.a
+{
+  color: black;
+  background-color: #8900ff;
+
+}
+.topnav a.active:hover
+{
+  background-color: #8900ff;
+}
+/*for the other hover of the menu class a*/
+.topnav a:hover
+{
+  background-color:#2196F3 ;
+
+}
+/* to create visited link*/
+.topnav a: visited
+{
+  background-color: green;
+}
+
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #9900ff;
+  position: static;
+
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+/*.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}*/
+/*code for Search BOX*/
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  border: none;
+  font-size: 17px;
+}
+
+/*for the search button*/
